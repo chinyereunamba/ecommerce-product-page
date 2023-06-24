@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-items">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="user-info">
+      <span class="cart">
+        <img src="./images/icon-cart.svg" alt="cart">
+        <div class="cart-content">
+          <h3>Cart</h3>
+          <div class="content">
+            <p>Your cart is empty.</p>
+            <div class="checkout">
+              <div class="img">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="">
+              </div>
+              <div class="checkout-des">
+                <p id="product-title">Fall Limited Edition Sneakers</p>
+                <p><span id="product-price">$125.00</span> x <span id="product-count">3</span>
+                  <span id="total">$375.00</span>
+                </p>
+              </div>
+              <span><img src="./images/icon-delete.svg" alt="delete_icon"></span>
+            </div>
+            <button>Checkout</button>
+          </div>
+        </div>
+      </span>
+      <span class="avatar"><img src="./images/image-avatar.png" alt="avatar"></span>
+    </div>
+  </nav>
+
+  <main>
+    <div class="product">
+      <div class="product-imgs">
+        <div class="main-img">
+          <img src="./images/image-product-1.jpg" alt="product-1-img">
+        </div>
+        <div class="thumbnail">
+          <div class="active">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+          <div>
+            <img src="./images/image-product-2-thumbnail.jpg" alt="">
+          </div>
+          <div>
+            <img src="./images/image-product-3-thumbnail.jpg" alt="">
+          </div>
+          <div>
+            <img src="./images/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="product-info">
+        <span>Sneaker Company</span>
+        <div class="product-title">
+          <h1>Fall Limited Edition Sneakers</h1>
+        </div>
+        <div class="product-des">
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+        </div>
+        <div class="price">
+          <div class="new-price">
+            <span class="current-price">$125.00</span> <span class="badge">50%</span>
+          </div>
+          <div class="cross">$250.00</div>
+        </div>
+        <div class="btns">
+          <div class="in-cart">
+            <span class="decrement">-</span>
+            <span class="number">0</span>
+            <span class="increment">+</span>
+          </div>
+          <div class="add">
+            <button>
+
+              <img src="./images/icon-cart.svg" alt="">
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/chinyereunamba" target="_blank">Chinyere Unamba</a>.
+  </div> -->
+</body>
+
+</html>
