@@ -78,6 +78,7 @@ nav .user-info {
 }
 
 .user-info .cart {
+    position: relative;
     cursor: pointer;
 }
 
@@ -86,6 +87,23 @@ nav .user-info {
 }
 .user-info .cart:hover img {
     filter: invert(1) brightness(0);
+}
+
+.cart #badge{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    background: hsl(26, 100%, 55%);
+    padding: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    /* height: 0.9rem; */
+    padding: 0.1rem 0.6rem;
+    border-radius: 10px;
 }
 
 .user-info .cart:hover .cart-content {
@@ -286,7 +304,7 @@ main .product-info {
     font-size: 0.9rem;
     color: hsl(219, 9%, 45%);
     text-decoration: line-through;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .product-info .btns {
@@ -315,6 +333,7 @@ main .product-info {
     width: 100%;
     cursor: pointer;
     box-shadow: 1px 15px 10px hsl(25, 100%, 94%);
+    user-select: none;
 }
 
 .btns .add button:hover {
@@ -340,14 +359,18 @@ main .product-info {
     border: none;
 }
 
-.in-cart .increment,
-.in-cart .decrement {
+.in-cart #increment,
+.in-cart #decrement {
     font-size: 1.4rem;
     color: hsl(26, 100%, 55%);
     cursor: pointer;
 }
 
-.in-cart .increment:hover,
-.in-cart .decrement:hover {
+.in-cart #increment:hover,
+.in-cart #decrement:hover {
     color: hsla(26, 100%, 55%, 0.7);
+}
+
+.in-cart{
+    user-select: none;
 }
