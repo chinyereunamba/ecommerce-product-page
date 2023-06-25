@@ -4,34 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | E-commerce product page</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
 
   <nav>
     <div class="nav-items">
+      <div class="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
       <div class="logo">
         <img src="./images/logo.svg" alt="logo">
       </div>
       <div class="nav-links">
+        <span><img src="./images/icon-close.svg" alt=""></span>
         <ul>
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
@@ -45,26 +37,27 @@
       <span class="cart">
         <img src="./images/icon-cart.svg" alt="cart">
         <span id="badge"></span>
-        <div class="cart-content">
-          <h3>Cart</h3>
-          <div class="content">
-            <p>Your cart is empty.</p>
-            <div class="checkout">
-              <div class="img">
-                <img src="./images/image-product-1-thumbnail.jpg" alt="">
-              </div>
-              <div class="checkout-des">
-                <p id="product-title">Fall Limited Edition Sneakers</p>
-                <p>$<span id="product-price">125.00</span> x <span id="product-count">3</span>
-                  <span id="total">$375.00</span>
-                </p>
-              </div>
-              <span><img src="./images/icon-delete.svg" alt="delete_icon"></span>
-            </div>
-            <button>Checkout</button>
-          </div>
-        </div>
+
       </span>
+      <div class="cart-content">
+        <h3>Cart</h3>
+        <div class="content">
+          <p class="empty">Your cart is empty.</p>
+          <div class="checkout">
+            <div class="img">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+            <div class="checkout-des">
+              <p id="product-title">Fall Limited Edition Sneakers</p>
+              <p>$<span id="product-price">125.00</span> x <span id="product-count">3</span>
+                <span id="total">$375.00</span>
+              </p>
+            </div>
+            <span><img src="./images/icon-delete.svg" alt="delete_icon"></span>
+          </div>
+          <button>Checkout</button>
+        </div>
+      </div>
       <span class="avatar"><img src="./images/image-avatar.png" alt="avatar"></span>
     </div>
   </nav>

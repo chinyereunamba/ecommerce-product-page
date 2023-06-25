@@ -29,11 +29,34 @@ nav .nav-items {
     gap: 3.3rem;
 }
 
+nav .nav-items .logo {
+    cursor: pointer;
+}
+
+nav .nav-items .burger {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+nav .nav-items .burger div {
+    width: 20px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: hsl(219, 9%, 45%);
+}
+
 .nav-items .nav-links ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
+}
+
+nav .nav-items .nav-links span {
+    display: none;
 }
 
 .nav-items .nav-links ul li {
@@ -42,7 +65,7 @@ nav .nav-items {
 }
 
 .nav-items .nav-links ul li:hover {
-    padding: calc(1.9rem - 3px) 0;
+    /* padding: calc(1.9rem - 3px) 0; */
     border-bottom: 4px solid hsl(26, 100%, 55%);
 }
 .nav-items .nav-links ul li:hover a {
@@ -85,11 +108,12 @@ nav .user-info {
 .user-info .cart img {
     width: 20px;
 }
-.user-info .cart:hover img {
+
+.user-info .cart:hover > img {
     filter: invert(1) brightness(0);
 }
 
-.cart #badge{
+.cart #badge {
     position: absolute;
     top: -10px;
     left: 10px;
@@ -116,10 +140,10 @@ nav .user-info {
 
 .cart-content {
     display: none;
-    position: absolute;
-    top: 4rem;
-    left: 0%;
-    transform: translateX(-50%);
+    position: fixed;
+    top: 4.5rem;
+    right: 1%;
+    /* transform: translateX(-50%); */
     width: 300px;
     min-height: 220px;
     background: hsl(0, 0%, 100%);
@@ -178,6 +202,7 @@ nav .user-info {
 }
 
 .cart-content .content.active button {
+    display: block;
     width: calc(100% - 2.4rem);
     margin: 0 0.4rem;
     padding: 0.9rem;
@@ -219,8 +244,7 @@ main .product {
     padding: 1.2rem 0;
 }
 
-.product .product-imgs .thumbnail > div {
-    position: relative;
+.product .product-imgs .thumbnail div {
     max-width: 90px;
     min-width: 50px;
     width: 100%;
@@ -336,7 +360,7 @@ main .product-info {
     user-select: none;
 }
 
-.btns .add button:hover {
+.btns .add button:hover, .cart-content .content button:hover {
     background: hsla(26, 100%, 55%, 0.7);
 }
 
@@ -371,6 +395,100 @@ main .product-info {
     color: hsla(26, 100%, 55%, 0.7);
 }
 
-.in-cart{
+.in-cart {
     user-select: none;
+}
+
+@media screen and (max-width: 1003px) {
+    .product-info .btns {
+        flex-direction: column;
+    }
+
+    .btns .in-cart,
+    .btns .add {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    body {
+        width: 100%;
+        margin: auto 0;
+    }
+    nav {
+        margin: 0 0.5rem;
+    }
+    nav .nav-items {
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+    nav .nav-items .burger {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .nav-items .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.7rem;
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        width: 50vw;
+        height: 100vh;
+        background-color: hsl(0, 0%, 100%);
+        margin: 0 0.5rem;
+    }
+
+    .nav-items .nav-links.active {
+        left: 0;
+    }
+
+    .nav-items .nav-links.active span{
+        display: flex;
+    }
+
+    .nav-items .nav-links span {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 1.5rem 1.5rem 1rem 1.5rem;
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .nav-items .nav-links span img {
+        width: 100%;
+    }
+
+    .nav-items .nav-links ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 84%;
+        margin: 0.5rem 1.5rem;
+    }
+    .nav-items .nav-links ul li {
+        padding: 0.5rem 0;
+    }
+    .nav-items .nav-links ul li:hover {
+        border: none;
+    }
+
+    .nav-items .nav-links ul li a {
+        font-weight: 700;
+        color: hsl(220, 13%, 13%);
+    }
+
+    main .product {
+        flex-direction: column;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
