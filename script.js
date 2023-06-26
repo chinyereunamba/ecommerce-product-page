@@ -13,6 +13,7 @@ const cartEmptyP = document.querySelector(".content .empty");
 const total = document.getElementById("total");
 const cartContainer = document.querySelector(".cart-content");
 const cartEl = document.querySelector(".user-info .cart");
+const deleteItemInCart = document.querySelector('.delete-icon')
 const burger = document.querySelector(".burger");
 const closeEl = document.querySelector(".nav-links span");
 const navMobile = document.querySelector(".nav-links");
@@ -37,6 +38,7 @@ increase.addEventListener("click", () => {
     number.textContent = Number(number.textContent) + 1;
     noInCart.textContent = number.textContent;
     noInCart.style = `display:flex`;
+    
     cart();
 });
 
@@ -49,10 +51,19 @@ addToCart.addEventListener("click", () => {
     cart();
 });
 
+deleteItemInCart.addEventListener('click', ()=>{
+      number.textContent = 0
+      noInCart.style = `display:none`
+      
+      cartContainerContent.classList.remove('active')
+      cartEmptyP.style = `display:flex`
+    })
+
 cartEl.addEventListener("click", () => {
     cartContainer.classList.toggle("active");
     
 });
+
 /* checkoutBtn.addEventListener('click', ()=>{
   cartContainer.classList.remove('active')
 })
@@ -87,4 +98,5 @@ function cart() {
         cartContainerContent.classList.remove("active");
         cartEmptyP.style = `display:block`;
     }
+    
 }
