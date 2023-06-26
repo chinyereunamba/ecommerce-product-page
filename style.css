@@ -216,6 +216,7 @@ nav .user-info {
 main {
     width: 90%;
     margin: 3rem auto;
+    /* position: relative; */
 }
 
 main .product {
@@ -259,7 +260,7 @@ main .product {
 }
 
 .thumbnail .active img,
-.thumbnail div img:hover {
+.thumbnail div img:hover{
     opacity: 0.3;
 }
 
@@ -268,6 +269,39 @@ main .product {
     border-radius: 12px;
 }
 
+main .preview{
+  display :none;
+  /* position: absolute; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+main .preview .img{
+  display :none;
+  max-width: 100%;
+  margin: 1rem;
+}
+main .preview .close{
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+main .preview .close img{
+  width: 25px;
+}
+main .preview .thumbnail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.1rem auto;
+  gap: 0.7rem;
+}
 main .product-info {
     max-width: 500px;
     padding: 1rem;
@@ -499,6 +533,7 @@ main .product-info {
 }
 
 @media screen and (max-width:426px) {
+  
   .cart-content{
     width: 95%;
     top:5rem;
