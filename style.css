@@ -417,6 +417,8 @@ main .product-info {
     }
     nav {
         margin: 0 0.5rem;
+        transition: 0.5s ease-out;
+
     }
     nav .nav-items {
         gap: 2rem;
@@ -431,6 +433,7 @@ main .product-info {
     nav .user-info{
         gap: 1rem;
         align-items: center;
+        margin-right: 0.5rem;
     }
 
     nav .user-info .avatar{
@@ -496,6 +499,13 @@ main .product-info {
 }
 
 @media screen and (max-width:426px) {
+  .cart-content{
+    width: 95%;
+    top:5rem;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%)
+  }
     main{
         width: 100%;
         margin: 0;
